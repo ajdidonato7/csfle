@@ -34,7 +34,7 @@ async function generateDataKey() {
     };
 
     const masterKey = {
-        key: "INSERT ARN OF MASTER KEY",
+        key: "INSERT ARN OF MASTER KEY FROM KMS",
         region: "INSERT REGION OF MASTER KEY",
     };
 
