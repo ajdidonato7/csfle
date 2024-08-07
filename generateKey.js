@@ -2,7 +2,7 @@ const mongodb = require("mongodb");
 const { MongoClient, Binary, ClientEncryption } = mongodb;
 
 async function generateDataKey() {
-    const uri = "INSERT DB CONNECTION STRING";
+    const uri = ""; // INSERT DB CONNECTION STRING
     const keyVaultDatabase = "encryption";
     const keyVaultCollection = "__keyVault";
     const keyVaultNamespace = `${keyVaultDatabase}.${keyVaultCollection}`;
@@ -28,14 +28,14 @@ async function generateDataKey() {
     const provider = "aws";
     const kmsProviders = {
       aws: {
-        accessKeyId: "INSERT ACCESS KEY ID FROM KMS",
-        secretAccessKey: "INSERT SECRET ACCESS KEY FROM KMS",
+        accessKeyId: "", // INSERT ACCESS KEY ID FROM KMS
+        secretAccessKey: "", // INSERT SECRET ACCESS KEY FROM KMS
       },
     };
 
     const masterKey = {
-        key: "INSERT ARN OF MASTER KEY FROM KMS",
-        region: "INSERT REGION OF MASTER KEY",
+        key: "", // INSERT ARN OF MASTER KEY FROM KMS
+        region: "", // INSERT REGION OF MASTER KEY
     };
 
     const client = new MongoClient(uri, {

@@ -3,7 +3,7 @@ const { MongoClient, Binary, ClientEncryption } = mongodb;
 
 async function queryEncryptedDoc() {
 
-    const connectionString = "INSERT DB CONNECTION STRING";
+    const connectionString = ""; // INSERT DB CONNECTION STRING
     const regularClient = new MongoClient(connectionString);
 
     const coll = "data";
@@ -15,12 +15,12 @@ async function queryEncryptedDoc() {
 
     const kmsProviders = {
         aws: {
-          accessKeyId: "INSERT ACCESS KEY ID FROM KMS",
-          secretAccessKey: "INSERT SECRET ACCESS KEY FROM KMS",
+          accessKeyId: "", // INSERT ACCESS KEY ID FROM KMS
+          secretAccessKey: "", // INSERT SECRET ACCESS KEY FROM KMS
         },
     };
 
-    dataKey = "INSERT DATA KEY HERE AFTER RUNNING generateKey.js";
+    dataKey = ""; // INSERT DATA KEY HERE AFTER RUNNING generateKey.js
     const schema = {
       bsonType: "object",
       encryptMetadata: {
@@ -63,12 +63,12 @@ async function queryEncryptedDoc() {
     patientSchema[namespace] = schema;
 
     const extraOptions = {
-      cryptSharedLibPath: "INSERT PATH OF CRYPT SHARED LIB PATH",
+      cryptSharedLibPath: "", // INSERT PATH OF CRYPT SHARED LIB PATH
     };
 
     const secureClient = new MongoClient(connectionString, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      // useNewUrlParser: true,
+      // useUnifiedTopology: true,
       autoEncryption: {
         keyVaultNamespace,
         kmsProviders,
